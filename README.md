@@ -1,47 +1,54 @@
-Plan:
----Backend GoodDeals---
+# Plan
+## ---Backend GoodDeals---
 
 TS, NestJS, MongoDB, Docker
+#### Users
+actions  :
++ registration/authorization
++ updateSettings/deleteUser
 
-registration/authorization
-updateSettings/deleteUser
+table  users:
+ ```
+id
+login
+pass
+name
+frends
+ ```
+ 
+ ### Deals
+ 
+ actions  :
+  * create/edit/remove
+ 
+table deals:
+```
+id
+userId
+heder
+text
+lastUpadteTime
+```
 
-users:
-    id
-    login
-    pass
-    name
-    frends
-
-
-listGoodDeeds
-    create/edit/remove
-
-goooDeeds
-    id
-    userId
-    heder
-    text
-    lastUpadteTime
-
-start
+start:
 npm start
 
----Frontend GoodDeals---
+
+## ---Frontend GoodDeals---
 
 TS, React, NextJS, Redux, Tailwind
 
-registration/authorization
-updateSettings/deleteUser
+actions: 
+  * registration/authorization
+  * updateSettings/deleteUser
+  * editDeals
+ 
+#### pages
+auth:
+registration/sign
 
-auth
-    registration/sign
+listGoodDeeds:
+create/edit/remove
 
-listGoodDeeds
-    create/edit/remove
-
-frends
-
-
-TODO:
+## TODO:
 1. test Docker image!!!
