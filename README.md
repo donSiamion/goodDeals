@@ -51,4 +51,8 @@ listGoodDeeds:
 create/edit/remove
 
 ## TODO:
-1. test Docker image!!!
+0. test Docker image!!!
+
+1. remade logIn/signUp page
+2. add deals list
+3. add add/edit deals
