@@ -7,10 +7,11 @@ import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class DealsService {
-    constructor(@InjectModel(Deal.name) private DealsModel: Model<DealsDocument>,
+    constructor(
+        @InjectModel(Deal.name) private DealsModel: Model<DealsDocument>,
     ) { }
 
-    async getAlluserDeals(userId: number): Promise<any> {
+    async getAllUserDeals(userId: number): Promise<any> {
         const deals = await this.DealsModel.find({ userId });
         return deals;
     }

@@ -9,7 +9,7 @@ export class DealsController {
 
     @Get('/get')
     async Get (@Res() response, @Body() user: User) {
-        const deals = await this.dealsServerice.getAlluserDeals(user.id);
+        const deals = await this.dealsServerice.getAllUserDeals(user.id);
         return response.status(HttpStatus.OK).json({ deals })
     }
 

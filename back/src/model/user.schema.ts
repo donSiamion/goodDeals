@@ -3,7 +3,7 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-    @Prop({required:true, unique:true})
+    @Prop({required:true, auto: true})
     id: number;
     @Prop({required:true})
     login: string;
@@ -12,6 +12,8 @@ export class User {
     @Prop({required:true})
     name: string
     @Prop({required:true})
-    frends: [any]
+    frends: Array<object>
+    @Prop({required:true})
+    rate: number
 }
 export const UserSchema = SchemaFactory.createForClass(User)
